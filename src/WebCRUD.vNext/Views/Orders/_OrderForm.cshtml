@@ -1,0 +1,97 @@
+﻿@model OrderViewModel
+
+<input type="hidden" asp-for="OrderForm.OrderId" />
+
+<div asp-validation-summary="All" class="alert alert-danger"></div>
+
+<div class="row">
+    <div class="form-group col-xs-12">
+        <label asp-for="OrderForm.OrderNumber" class="control-label"></label>
+        <div>
+            <input asp-for="OrderForm.OrderNumber" class="form-control" />
+            <span asp-validation-for="OrderForm.OrderNumber" class="text-danger"></span>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="form-group col-xs-6">
+        <label asp-for="OrderForm.Date" class="control-label"></label>
+        <div>
+            <input asp-for="OrderForm.Date" class="form-control" />
+            <span asp-validation-for="OrderForm.Date" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group col-xs-6">
+        <label asp-for="OrderForm.Status" class="control-label"></label>
+        <div>
+            @if (User.IsInRole("administrator"))
+            {
+                <select asp-for="OrderForm.Status" asp-items="Model.OrderForm.StatusList" class="form-control"></select>
+            }
+            else
+            {
+                <select asp-for="OrderForm.Status" asp-items="Model.OrderForm.StatusList" class="form-control" disabled="disabled"></select>
+            }
+            <span asp-validation-for="OrderForm.Status" class="text-danger"></span>
+        </div>
+    </div>
+
+</div>
+
+<fieldset>
+    <legend>@Labels["OrderForm_Customer"]</legend>
+
+    <input type="hidden" asp-for="OrderForm.CustomerId" />
+
+    <div class="row">
+        <div class="form-group col-xs-12">
+            <label asp-for="OrderForm.CustomerName" class="control-label"></label>
+            <div>
+                <input type="text" asp-for="OrderForm.CustomerName" class="form-control typeahead" />
+                <span asp-validation-for="OrderForm.CustomerName" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+
+</fieldset>
+
+<table id="orderItems" class="table table-hover">
+    <thead>
+        <tr>
+            <th>@Labels["OrderForm_Product"]</th>
+            <th>@Labels["OrderForm_Price"]</th>
+            <th>@Labels["OrderForm_Quantity"]</th>
+            <th>@Labels["OrderForm_Discount"]</th>
+            <th>@Labels["OrderForm_TotalAmount"]</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.OrderForm.Items)
+        {
+            await Html.RenderPartialAsync("_OrderItem", item);
+        }        
+    </tbody>
+    <tfoot>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+                @Labels["OrderForm_TotalAmountSum"]: 
+                <span id="orderTotalAmount">@Html.DisplayFor(m => m.OrderForm.TotalAmount)</span>
+            </td>
+            <td></td>
+        </tr>
+    </tfoot>
+</table>
+
+<div class="controls-row">
+    <button class="btn btn-default pull-right" id="addBlankOrderItem"><i class="glyphicon glyphicon-plus-sign"></i> @Labels["AddNewItem"]</button>
+</div>
+
+<div class="form-actions">
+    <button type="submit" class="btn btn-primary">@Labels["Save"]</button>
+</div>

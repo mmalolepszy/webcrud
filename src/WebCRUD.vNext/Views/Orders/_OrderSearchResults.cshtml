@@ -1,0 +1,29 @@
+﻿@model OrderSearchViewModel
+
+@if (!Model.Results.Any())
+{
+    <div class="alert alert-info">@Labels["NoResultsFound"]</div>
+}
+    else
+    {
+    <table id="orderSearchResultsTable" class="table table-hover">
+        <thead>
+            <tr>
+                <th>@Labels["OrderSearchForm_OrderNumber"]</th>
+                <th>@Labels["OrderSearchForm_OrderDate"]</th>
+                <th>@Labels["OrderSearchForm_OrderStatus"]</th>
+                <th>@Labels["OrderSearchForm_OrderTotalAmount"]</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Results)
+            {
+                @Html.Partial("_OrderSearchResultsItem", item)
+            }
+        </tbody>
+    </table>
+}
+
+

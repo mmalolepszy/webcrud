@@ -1,0 +1,50 @@
+﻿@model OrderSearchViewModel
+
+<div class="row">
+    <!-- col 1 -->
+    <div class="col-xs-6">
+        <div class="form-group">
+            <label asp-for="SearchForm.OrderNumber" class="control-label"></label>
+            <input asp-for="SearchForm.OrderNumber" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="SearchForm.OrderDateFrom" class="control-label"></label>
+            <div class="form-inline">
+                <input asp-for="SearchForm.OrderDateFrom" class="form-control datepicker date" />
+                <input asp-for="SearchForm.OrderDateTo" class="form-control datepicker date" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="SearchForm.TotalAmountFrom" class="control-label"></label>
+            <div class="form-inline">
+                <input asp-for="SearchForm.TotalAmountFrom" class="form-control" />
+                <input asp-for="SearchForm.TotalAmountTo" class="form-control" />
+            </div>
+        </div>
+    </div>
+
+    <!-- col 2 -->
+    <div class="col-xs-6">
+        <div class="form-group">
+            <label asp-for="SearchForm.Customers" class="control-label"></label>
+            <select asp-for="SearchForm.CustomerId" asp-items="Model.SearchForm.Customers" class="form-control"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="SearchForm.Products" class="control-label"></label>
+            <select asp-for="SearchForm.ProductId" asp-items="Model.SearchForm.Products" class="form-control"></select>
+        </div>
+        <div class="form-group">
+            <label asp-for="SearchForm.Status" class="control-label"></label>
+            <select asp-for="SearchForm.Status" asp-items="Model.SearchForm.Statuses" class="form-control"></select>
+        </div>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="form-group col-xs-6">
+        <button type="submit" class="btn btn-primary"><i class="glyphicon glyphicon-search"></i> @Labels["Search"]</button>
+        <button type="reset" class="btn btn-default">@Labels["Reset"]</button>
+        <a asp-controller="Orders" asp-action="Create" class="btn btn-default">@Labels["OrderCreateForm_Title"]</a>
+    </div>
+</div>

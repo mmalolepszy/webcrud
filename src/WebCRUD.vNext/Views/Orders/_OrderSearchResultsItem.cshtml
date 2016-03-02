@@ -1,0 +1,23 @@
+﻿@model OrderSearchResultItem
+
+<tr data-order-id="@Model.OrderId" data-order-number="@Model.OrderNumber">
+    <td>@Model.OrderNumber</td>
+    <td>@Model.OrderDate</td>
+    <td>@Model.Status</td>
+    <td>@Model.TotalAmount</td>
+    <td>
+        @if (@Model.CanBeApproved)
+        {
+            <button class="btn btn-xs btn-info approveOrder">@Labels["OrderSearchForm_Approve"]</button>
+        }
+
+        @if (@Model.CanBeClosed)
+        {
+            <button class="btn btn-xs btn-info closeOrder">@Labels["OrderSearchForm_Close"]</button>
+        }
+            &nbsp;
+    </td>
+    <td>
+        <a class="btn btn-xs btn-default" asp-action="Edit" asp-controller="Orders" asp-route-id="@Model.OrderId"><i class="glyphicon glyphicon-edit"></i> @Labels["Details"]</a>
+    </td>
+</tr>

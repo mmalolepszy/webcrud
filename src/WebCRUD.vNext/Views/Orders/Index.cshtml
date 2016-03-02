@@ -1,0 +1,25 @@
+﻿@model OrderSearchViewModel
+
+@{
+    ViewData["Title"] = Labels["OrderSearchForm_Title"];
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-controller="Orders" asp-action="Find" id="OrderSearchForm">
+    @Html.Partial("_OrderSearchCriteria", Model)
+</form>
+
+<div id="orderSearchResults">
+</div>
+
+@section Scripts {
+    <script src="~/js/Application/Orders/SearchOrdersController.js"></script>
+    <script type="text/javascript">
+        //init controller
+        $(function () {
+            var ctrl = new SearchOrdersController();
+            ctrl.init();
+        });
+    </script>
+}

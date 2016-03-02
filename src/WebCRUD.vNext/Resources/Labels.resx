@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppTitle" xml:space="preserve">
+    <value>WebCRUD.vNext</value>
+  </data>
+  <data name="ClaimForm_SelectPolicy" xml:space="preserve">
+    <value>Select policy</value>
+  </data>
+  <data name="ClaimsCreateForm_Title" xml:space="preserve">
+    <value>Create claim</value>
+  </data>
+  <data name="ClaimSearchForm_Title" xml:space="preserve">
+    <value>Search claims</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Details</value>
+  </data>
+  <data name="Home_Title" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="LoggedInAs" xml:space="preserve">
+    <value>Logged in as {0}</value>
+  </data>
+  <data name="PolicySearchForm_Title" xml:space="preserve">
+    <value>Search policy</value>
+  </data>
+  <data name="ClaimSearchForm_ClaimNumber" xml:space="preserve">
+    <value>Claim number</value>
+  </data>
+  <data name="ClaimSearchForm_ClaimStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="ClaimSearchForm_EventDate" xml:space="preserve">
+    <value>Event date</value>
+  </data>
+  <data name="ClaimSearchForm_EventType" xml:space="preserve">
+    <value>Event type</value>
+  </data>
+  <data name="ClaimSearchForm_PolicyHolder" xml:space="preserve">
+    <value>Policy holder</value>
+  </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="NoResultsFound" xml:space="preserve">
+    <value>No results match the specified criteria.</value>
+  </data>
+  <data name="SelectMultipleHint" xml:space="preserve">
+    <value>Use Ctrl+click to select or deselect multiple items.</value>
+  </data>
+  <data name="ClaimSearchForm_Amounts" xml:space="preserve">
+    <value>Amounts</value>
+  </data>
+  <data name="ClaimStatus_Approved" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="ClaimStatus_Open" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="ClaimStatus_Rejected" xml:space="preserve">
+    <value>Rejected</value>
+  </data>
+  <data name="EventType_Accident" xml:space="preserve">
+    <value>Accident</value>
+  </data>
+  <data name="EventType_Birth" xml:space="preserve">
+    <value>Birth</value>
+  </data>
+  <data name="EventType_Death" xml:space="preserve">
+    <value>Death</value>
+  </data>
+  <data name="EventType_Other" xml:space="preserve">
+    <value>Other</value>
+  </data>
+  <data name="ClaimSearchForm_Approve" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="ClaimSearchForm_ClaimNumber_Placeholder" xml:space="preserve">
+    <value>e.g. 1234</value>
+  </data>
+  <data name="ClaimSearchForm_EventDateFrom" xml:space="preserve">
+    <value>Event date</value>
+  </data>
+  <data name="ClaimSearchForm_PolicyHolderFirstName" xml:space="preserve">
+    <value>Policy holder</value>
+  </data>
+  <data name="ClaimSearchForm_PolicyHolderFirstName_Placeholder" xml:space="preserve">
+    <value>e.g. Jan</value>
+  </data>
+  <data name="ClaimSearchForm_PolicyHolderLastName_Placeholder" xml:space="preserve">
+    <value>e.g. Kowalski</value>
+  </data>
+  <data name="ClaimSearchForm_Reject" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="ClaimSearchForm_SelectedStatuses" xml:space="preserve">
+    <value>Claim statuses</value>
+  </data>
+  <data name="ClaimSearchForm_TotalAmount_Hint" xml:space="preserve">
+    <value>Total Amount</value>
+  </data>
+  <data name="ClaimSearchForm_TotalCoveredAmount_Hint" xml:space="preserve">
+    <value>Total Covered Amount</value>
+  </data>
+  <data name="Confirm_Title" xml:space="preserve">
+    <value>Confirm changes</value>
+  </data>
+  <data name="NavHeaders_Claims" xml:space="preserve">
+    <value>Claims</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="EditClaim_Title" xml:space="preserve">
+    <value>Edit claim {0}</value>
+  </data>
+  <data name="MainMenu_Claims" xml:space="preserve">
+    <value>Claims</value>
+  </data>
+  <data name="AddNewDetails" xml:space="preserve">
+    <value>Add New Detail</value>
+  </data>
+  <data name="ClaimForm_Amount" xml:space="preserve">
+    <value>Amount</value>
+  </data>
+  <data name="ClaimForm_ClaimNumber" xml:space="preserve">
+    <value>Claim number</value>
+  </data>
+  <data name="ClaimForm_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="ClaimForm_EventDate" xml:space="preserve">
+    <value>Event date</value>
+  </data>
+  <data name="ClaimForm_EventTypeCode" xml:space="preserve">
+    <value>Event type</value>
+  </data>
+  <data name="ClaimForm_Excluded" xml:space="preserve">
+    <value>Excluded</value>
+  </data>
+  <data name="ClaimForm_Policy" xml:space="preserve">
+    <value>Policy</value>
+  </data>
+  <data name="ClaimForm_Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="ClaimForm_Product" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="ClaimForm_Qt" xml:space="preserve">
+    <value>Qt</value>
+  </data>
+  <data name="ClaimForm_Service" xml:space="preserve">
+    <value>Service</value>
+  </data>
+  <data name="ValidationErrorsDivHeader" xml:space="preserve">
+    <value>Please correct the following errors:</value>
+  </data>
+  <data name="SecurityExceptionDefaultMessage" xml:space="preserve">
+    <value>You are not allowed to perform this operation.</value>
+  </data>
+  <data name="ValueNotValidForProperty" xml:space="preserve">
+    <value>The value '{0}' is invalid.</value>
+  </data>
+  <data name="UnexpectedErrorDefaultMessage" xml:space="preserve">
+    <value>Sorry, unexpected error occurred while processing your request.</value>
+  </data>
+  <data name="LanguageSelector_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Login_Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Login_Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Login_Username" xml:space="preserve">
+    <value>Username</value>
+  </data>
+  <data name="MainMenu_Enrollment" xml:space="preserve">
+    <value>Enrollment</value>
+  </data>
+  <data name="PolicyCreateForm_Title" xml:space="preserve">
+    <value>Create policy</value>
+  </data>
+  <data name="PolicyForm_CoverFrom" xml:space="preserve">
+    <value>Cover from</value>
+  </data>
+  <data name="PolicyForm_CoverTo" xml:space="preserve">
+    <value>Cover to</value>
+  </data>
+  <data name="PolicyForm_PolicyHolderBirthdate" xml:space="preserve">
+    <value>Birthdate</value>
+  </data>
+  <data name="PolicyForm_PolicyHolderFirstName" xml:space="preserve">
+    <value>First name</value>
+  </data>
+  <data name="PolicyForm_PolicyHolderIdentifier" xml:space="preserve">
+    <value>Tax ID</value>
+  </data>
+  <data name="PolicyForm_PolicyHolderLastName" xml:space="preserve">
+    <value>Last name</value>
+  </data>
+  <data name="PolicyForm_PolicyNumber" xml:space="preserve">
+    <value>Policy number</value>
+  </data>
+  <data name="PolicySearchForm_PolicyHolder" xml:space="preserve">
+    <value>Policy holder</value>
+  </data>
+  <data name="Expired" xml:space="preserve">
+    <value>Expired</value>
+  </data>
+  <data name="ExpiresSoon" xml:space="preserve">
+    <value>Expires soon</value>
+  </data>
+  <data name="HasOpenClaims" xml:space="preserve">
+    <value>Open claims</value>
+  </data>
+  <data name="MainMenu_Orders" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="OrderCreateForm_Title" xml:space="preserve">
+    <value>Create order</value>
+  </data>
+  <data name="OrderSearchForm_Title" xml:space="preserve">
+    <value>Search orders</value>
+  </data>
+  <data name="OrderSearchForm_Customers" xml:space="preserve">
+    <value>Customers</value>
+  </data>
+  <data name="OrderSearchForm_OrderDateFrom" xml:space="preserve">
+    <value>Order date</value>
+  </data>
+  <data name="OrderSearchForm_OrderNumber" xml:space="preserve">
+    <value>Order number</value>
+  </data>
+  <data name="OrderSearchForm_Products" xml:space="preserve">
+    <value>Products</value>
+  </data>
+  <data name="OrderSearchForm_TotalAmountFrom" xml:space="preserve">
+    <value>Total amount</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="OrderForm_OrderNumber" xml:space="preserve">
+    <value>Order number</value>
+  </data>
+  <data name="OrderForm_Status" xml:space="preserve">
+    <value>Order status</value>
+  </data>
+  <data name="OrderForm_Date" xml:space="preserve">
+    <value>Order date</value>
+  </data>
+  <data name="OrderForm_Discount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="OrderForm_Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="OrderForm_Product" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="OrderForm_Quantity" xml:space="preserve">
+    <value>Quantity</value>
+  </data>
+  <data name="OrderForm_TotalAmount" xml:space="preserve">
+    <value>Total amount</value>
+  </data>
+  <data name="OrderStatus_Approved" xml:space="preserve">
+    <value>Approved</value>
+  </data>
+  <data name="OrderStatus_Closed" xml:space="preserve">
+    <value>Closed</value>
+  </data>
+  <data name="OrderStatus_New" xml:space="preserve">
+    <value>New</value>
+  </data>
+  <data name="OrderForm_CustomerName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="OrderSearchForm_Approve" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="OrderSearchForm_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="OrderSearchForm_OrderDate" xml:space="preserve">
+    <value>Order date</value>
+  </data>
+  <data name="OrderSearchForm_OrderStatus" xml:space="preserve">
+    <value>Status</value>
+  </data>
+  <data name="OrderSearchForm_OrderTotalAmount" xml:space="preserve">
+    <value>Total amount</value>
+  </data>
+  <data name="AddNewItem" xml:space="preserve">
+    <value>Add new item</value>
+  </data>
+  <data name="EditOrder_Title" xml:space="preserve">
+    <value>Edit order {0}</value>
+  </data>
+  <data name="OrderForm_TotalAmountSum" xml:space="preserve">
+    <value>Total</value>
+  </data>
+  <data name="SecurityExceptionCannotChangeStatus" xml:space="preserve">
+    <value>You are not allowed to change order status.</value>
+  </data>
+  <data name="Approve" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="OrderForm_Customer" xml:space="preserve">
+    <value>Customer</value>
+  </data>
+</root>

@@ -1,0 +1,5 @@
+﻿{
+  "server": "Microsoft.AspNetCore.Server.Kestrel",
+  "server.urls": "http://0.0.0.0:5004/",
+  "environment":  "Development"
+}

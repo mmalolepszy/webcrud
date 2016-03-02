@@ -1,0 +1,72 @@
+﻿{
+  "authors": [
+    "Michał Małolepszy"
+  ],
+  "description": "WebCRUD using AspNetCore nightly builds",
+  "version": "1.0.0-beta.1",
+  "compilationOptions": {
+    "emitEntryPoint": true,
+    "warningsAsErrors": true,
+    "define": [
+      "DEBUG"
+    ],
+    "preserveCompilationContext": true
+  },
+  "tools": {
+    "dotnet-publish-iis": "1.0.0-*",
+    "dotnet-ef": "1.0.0-*"
+  },
+  "content": [
+    "Views",
+    "wwwroot",
+    "hosting.json",
+    "appsettings.json",
+    "WebCRUD.db"
+  ],
+  "exclude": [
+    "wwwroot/lib/globalize"
+  ],
+  "dependencies": {
+    "Microsoft.AspNetCore.Diagnostics": "1.0.0-*",
+    "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.0.0-*",
+    "Microsoft.AspNetCore.Hosting": "1.0.0-*",
+    "Microsoft.AspNetCore.Http": "1.0.0-*",
+    "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0-*",
+    "Microsoft.AspNetCore.IISPlatformHandler": "1.0.0-*",
+    "Microsoft.AspNetCore.Mvc": "1.0.0-*",
+    "Microsoft.AspNetCore.Mvc.TagHelpers": "1.0.0-*",
+    "Microsoft.AspNetCore.Session": "1.0.0-*",
+    "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-*",
+    "Microsoft.AspNetCore.Server.WebListener": "0.1.0-*",
+    "Microsoft.AspNetCore.StaticFiles": "1.0.0-*",
+    "Microsoft.EntityFrameworkCore": "1.0.0-*",
+    "Microsoft.EntityFrameworkCore.Sqlite": "1.0.0-*",
+    "Microsoft.EntityFrameworkCore.Sqlite.Design": "1.0.0-*",
+    "Microsoft.Extensions.Configuration.CommandLine": "1.0.0-*",
+    "Microsoft.Extensions.Configuration.EnvironmentVariables": "1.0.0-*",
+    "Microsoft.Extensions.Configuration.Json": "1.0.0-*",
+    "Microsoft.Extensions.Logging.Console": "1.0.0-*",
+    "Microsoft.Extensions.Logging.Debug": "1.0.0-*",
+    "Microsoft.Extensions.Options.ConfigurationExtensions": "1.0.0-*",
+    "Microsoft.NETCore.Platforms": "1.0.1-*"
+  },
+  "commands": {
+    "web": "WebCRUD.vNext"
+  },
+  "frameworks": {
+    "dnxcore50": {
+      "dependencies": {
+        "NETStandard.Library": "1.0.0-*"
+      },
+      "imports": "portable-net451+win8"
+    }
+  },
+  "scripts": {
+    "prepublish": [
+      "npm install",
+      "bower install",
+      "gulp clean",
+      "gulp min"
+    ]
+  }
+}

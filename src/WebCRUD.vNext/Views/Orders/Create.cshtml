@@ -1,0 +1,24 @@
+﻿@model OrderViewModel
+
+@{
+    ViewData["Title"] = Labels["OrderCreateForm_Title"];
+}
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" asp-controller="Orders" method="post" id="OrderForm">
+    @Html.Partial("_OrderForm", Model)
+</form>
+
+@section Scripts
+{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+    
+    <script type="text/javascript" src="~/js/Application/Orders/EditOrderController.js"></script>
+    <script type="text/javascript">
+        //init controller in view mode
+        $(function () {
+            var ctrl = new OrderFormController(OrderFormController.OrderFormControllerModes.CREATE);
+            ctrl.init();
+        });
+    </script>
+}

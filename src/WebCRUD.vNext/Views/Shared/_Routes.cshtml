@@ -1,0 +1,21 @@
+﻿<script type="text/javascript">
+
+    $(function() {
+
+        Application.Routes = {
+
+            Home: {
+                Index:                  "@Url.Action("Index", "Home")"
+            },
+
+            Orders: {
+                AddBlankOrderItem:  "@Url.Action("AddBlankOrderItem", "Orders")",
+                GetProductDetails:  "@Url.Action("GetProductDetails", "Products")",
+                GetCustomers:       "@Url.Action("GetCustomers", "Customers")",
+                Approve:            "@Url.Action("Approve", "Orders")",
+                Close:              "@Url.Action("Close", "Orders")"
+            }
+
+        };
+    });
+</script>

@@ -1,0 +1,35 @@
+﻿@model OrderItemForm
+
+<tr collection-item="OrderForm.Items" class="OrderItemRow">
+    <td>
+        <input type="hidden" asp-for="OrderItemId" />
+
+        <span class="control-group">
+            <select asp-for="ProductId" asp-items="Model.Products" class="form-control input-sm productSelector"></select>
+            <span asp-validation-for="ProductId"></span>
+        </span>
+    </td>
+    <td>
+        <input type="text" asp-for="Price" readonly="readonly" class="form-control input-sm priceInput" />
+    </td>
+    <td>
+        <span class="control-group">
+            <input type="text" asp-for="Quantity" class="form-control input-sm quantityInput" />
+            <span asp-validation-for="Quantity"></span>
+        </span>
+    </td>
+    <td>
+        <span class="control-group">
+            <input type="text" asp-for="Discount" class="form-control input-sm discountInput" />
+            <span asp-validation-for="Discount"></span>
+        </span>
+    </td>
+    <td>
+        <input type="text" asp-for="TotalAmount" readonly="readonly" class="form-control input-sm totalAmountInput" />
+    </td>
+    <td>
+        <a class="removeOrderItem btn btn-xs btn-default">
+            <i class="glyphicon glyphicon-remove-sign"></i>
+        </a>
+    </td>
+</tr>
