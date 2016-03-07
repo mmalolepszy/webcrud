@@ -65,9 +65,9 @@
   "scripts": {
     "prepublish": [
       "npm install",
-      "bower install",
-      "gulp clean",
-      "gulp min"
+      "node node_modules/bower/bin/bower --allow-root install",
+      "node node_modules/gulp/bin/gulp.js clean",
+      "node node_modules/gulp/bin/gulp.js min"
     ]
   }
 }
