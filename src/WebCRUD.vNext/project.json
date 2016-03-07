@@ -31,7 +31,6 @@
     "Microsoft.AspNetCore.Hosting": "1.0.0-*",
     "Microsoft.AspNetCore.Http": "1.0.0-*",
     "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "1.0.0-*",
-    "Microsoft.AspNetCore.IISPlatformHandler": "1.0.0-*",
     "Microsoft.AspNetCore.Mvc": "1.0.0-*",
     "Microsoft.AspNetCore.Mvc.TagHelpers": "1.0.0-*",
     "Microsoft.AspNetCore.Session": "1.0.0-*",

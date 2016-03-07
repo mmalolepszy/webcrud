@@ -8,11 +8,10 @@ namespace WebCRUD.vNext
         // Entry point for the application.
         public static void Main(string[] args)
         {
-            IWebHostBuilder hostBuilder = new WebHostBuilder();
-            hostBuilder = hostBuilder.UseDefaultConfiguration(args);
-            hostBuilder = hostBuilder.UseIISPlatformHandlerUrl();
-            hostBuilder = hostBuilder.UseStartup<Startup>();
-            IWebHost host = hostBuilder.Build();
+            var host = new WebHostBuilder()
+                .UseDefaultConfiguration(args)
+                .UseStartup<Startup>()
+                .Build();
 
             host.Run();
         }

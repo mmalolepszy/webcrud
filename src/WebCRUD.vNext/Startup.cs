@@ -155,11 +155,6 @@ namespace WebCRUD.vNext
 
             app.UseRequestLocalization(requestLocalizationOptions);
 
-            var iisPlatformHandlerOptions = new IISPlatformHandlerOptions();
-            iisPlatformHandlerOptions.AuthenticationDescriptions.Clear();
-
-            app.UseIISPlatformHandler(iisPlatformHandlerOptions);
-
             // Configure Session.
             app.UseSession();
 
