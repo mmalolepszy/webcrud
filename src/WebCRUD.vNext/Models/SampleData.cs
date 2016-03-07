@@ -18,7 +18,7 @@ namespace WebCRUD.vNext.Models
         public static async void Initialize(IServiceProvider serviceProvider)
         {
             ApplicationDbContext context = serviceProvider.GetService<ApplicationDbContext>();
-            //context.Database.Migrate();
+            context.Database.Migrate();
 
             context.Roles.RemoveRange(context.Roles);
             context.Users.RemoveRange(context.Users);
