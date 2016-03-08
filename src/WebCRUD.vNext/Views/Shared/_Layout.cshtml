@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@inject Microsoft.AspNetCore.Hosting.IHostingEnvironment Host;
+
+<!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
@@ -14,6 +16,9 @@
             <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css"
                   asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
                   asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+            <link rel="stylesheet" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/themes/redmond/jquery-ui.css"
+                  asp-fallback-href="~/lib/jquery-ui/themes/redmond/jquery-ui.min.css"
+                  asp-fallback-test-class="ui-helper-hidden" asp-fallback-test-property="display" asp-fallback-test-value="none" />
             <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
         </environment>
     </head>
@@ -52,8 +57,9 @@
                 @RenderBody()
             </div>
             <hr class="clearfix" />
-            <footer >
-                <p>&copy; 2016 - @Labels["AppTitle"]</p>
+            <footer>
+                <p class="pull-left">&copy; 2016 - @Labels["AppTitle"]</p>
+                <p class="pull-right">Environment: @Host.EnvironmentName</p>
             </footer>
             @Html.Partial("_Modals")
         </div>
@@ -61,18 +67,19 @@
         <environment names="Development">
             <script src="~/lib/jquery/dist/jquery.js"></script>
             <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
-            <script src="~/lib/jquery-ui/jquery-ui.js"></script>
             <script src="~/lib/globalize/lib/globalize.js"></script>
             <script src="~/lib/globalize/lib/cultures/globalize.culture.en-GB.js"></script>
             <script src="~/lib/globalize/lib/cultures/globalize.culture.pl-PL.js"></script>
+            <script src="~/lib/jquery-ui/jquery-ui.js"></script>
+            <script src="~/lib/jquery-ui/ui/i18n/datepicker-en-GB.js"></script>
+            <script src="~/lib/jquery-ui/ui/i18n/datepicker-pl.js"></script>
             <script src="~/lib/jquery.cookie/jquery.cookie.js"></script>
             <script src="~/lib/typeahead.js/dist/typeahead.bundle.js"></script>
             <script src="~/lib/handlebars/handlebars.js"></script>
-            <script src="~/lib/jquery-ui/ui/i18n/datepicker-en-GB.js"></script>
-            <script src="~/lib/jquery-ui/ui/i18n/datepicker-pl.js"></script>
             <script src="~/js/site.js" asp-append-version="true"></script>
-            <script asp-src-include="~/js/Localization/*.js, ~/js/Application/*.js"
-                    asp-src-exclude="~/js/Application/*/*.js, ~/js/Application/plugins.extensions.js"></script>
+            <script asp-src-include="~/js/Localization/*.js, ~/js/Application/*.js, ~/js/Application/*/*.js"
+                    asp-src-exclude="~/js/Application/plugins.extensions.js"
+                    asp-append-version="true"></script>
         </environment>
         <environment names="Staging,Production">
             <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js"
@@ -83,15 +90,33 @@
                     asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
                     asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal">
             </script>
-            <script src="~/lib/jquery-ui/jquery-ui.js"></script>
-            <script src="~/lib/globalize/lib/globalize.js"></script>
-            <script src="~/lib/globalize/lib/cultures/globalize.culture.en-GB.js"></script>
-            <script src="~/lib/globalize/lib/cultures/globalize.culture.pl-PL.js"></script>
+            <script src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/globalize.min.js"
+                    asp-fallback-src="~/lib/globalize/lib/globalize.js"
+                    asp-fallback-test="window.Globalize">
+            </script>
+            <script src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/cultures/globalize.culture.en-GB.js"
+                    asp-fallback-src="~/lib/globalize/lib/cultures/globalize.culture.en-GB.js"
+                    asp-fallback-test="window.Globalize.cultures['en-GB']">
+            </script>
+            <script src="http://ajax.aspnetcdn.com/ajax/globalize/0.1.1/cultures/globalize.culture.pl-PL.js"
+                    asp-fallback-src="~/lib/globalize/lib/cultures/globalize.culture.pl-PL.js"
+                    asp-fallback-test="window.Globalize.cultures['pl-PL']">
+            </script>
+            <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/jquery-ui.min.js"
+                    asp-fallback-src="~/lib/jquery-ui/jquery-ui.min.js"
+                    asp-fallback-test="window.jQuery.ui">
+            </script>
+            <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/i18n/datepicker-en-GB.js"
+                    asp-fallback-src="~/lib/jquery-ui/ui/i18n/datepicker-en-GB.js"
+                    asp-fallback-test="window.jQuery.datepicker.regional['en-GB']">
+            </script>
+            <script src="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/i18n/datepicker-pl.js"
+                    asp-fallback-src="~/lib/jquery-ui/ui/i18n/datepicker-pl.js"
+                    asp-fallback-test="window.jQuery.datepicker.regional['pl']">
+            </script>
             <script src="~/lib/jquery.cookie/jquery.cookie.js"></script>
             <script src="~/lib/typeahead.js/dist/typeahead.bundle.js"></script>
             <script src="~/lib/handlebars/handlebars.js"></script>
-            <script src="~/lib/jquery-ui/ui/i18n/datepicker-en-GB.js"></script>
-            <script src="~/lib/jquery-ui/ui/i18n/datepicker-pl.js"></script>
             <script src="~/js/site.min.js" asp-append-version="true"></script> 
         </environment>
 
