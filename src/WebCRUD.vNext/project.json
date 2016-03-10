@@ -16,11 +16,11 @@
     "dotnet-ef": "1.0.0-*"
   },
   "content": [
+    "data",
     "Views",
     "wwwroot",
     "hosting.json",
-    "appsettings.json",
-    "WebCRUD.db"
+    "appsettings.json"
   ],
   "exclude": [
     "wwwroot/lib/globalize"
