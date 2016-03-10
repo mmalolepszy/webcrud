@@ -20,7 +20,6 @@ namespace WebCRUD.vNext.Models
 
         public DbSet<Domain.Orders.Customer> Customer { get; set; }
         public DbSet<Domain.Orders.Order> Order { get; set; }
-        public DbSet<Domain.Orders.OrderItem> OrderItems { get; set; }
         public DbSet<Domain.Orders.Product> Product { get; set; }
     }
 }
