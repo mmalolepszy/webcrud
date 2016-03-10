@@ -20,10 +20,6 @@ namespace WebCRUD.vNext.Models
             ApplicationDbContext context = serviceProvider.GetService<ApplicationDbContext>();
             context.Database.Migrate();
 
-            context.Roles.RemoveRange(context.Roles);
-            context.Users.RemoveRange(context.Users);
-            context.SaveChanges();
-
             if(!context.Roles.Any())
             {
                 var role = new IdentityRole("admin");
