@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Localization;
@@ -20,13 +21,13 @@ namespace WebCRUD.vNext
 {
     public class Startup
     {
-        public Startup(IApplicationEnvironment applicationEnvironment, IRuntimeEnvironment runtimeEnvironment)
+        public Startup(IHostingEnvironment hostingEnvironment)
         {
             // Below code demonstrates usage of multiple configuration sources. For instance a setting say 'setting1'
             // is found in both the registered sources, then the later source will win. By this way a Local config
             // can be overridden by a different setting while deployed remotely.
             var builder = new ConfigurationBuilder()
-                .SetBasePath(applicationEnvironment.ApplicationBasePath)
+                .SetBasePath(hostingEnvironment.ContentRootPath)
                 .AddJsonFile("appsettings.json")
                 //All environment variables in the process's context flow in as configuration values.
                 .AddEnvironmentVariables();
