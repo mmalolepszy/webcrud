@@ -38,8 +38,7 @@ namespace WebCRUD.vNext
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddEntityFramework()
-                .AddSqlite()
+            services.AddEntityFrameworkSqlite()
                 .AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlite(Configuration["Data:DefaultConnection:ConnectionString"]));
 
