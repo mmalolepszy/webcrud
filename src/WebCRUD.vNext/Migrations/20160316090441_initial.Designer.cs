@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
@@ -8,13 +8,13 @@ using WebCRUD.vNext.Models;
 namespace WebCRUD.vNext.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20160307115919_initial")]
+    [Migration("20160316090441_initial")]
     partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
             modelBuilder
-                .HasAnnotation("ProductVersion", "1.0.0-rc2-20096");
+                .HasAnnotation("ProductVersion", "1.0.0-t160316083902");
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityRole", b =>
                 {
@@ -106,6 +106,21 @@ namespace WebCRUD.vNext.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("AspNetUserRoles");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityUserToken<string>", b =>
+                {
+                    b.Property<string>("UserId");
+
+                    b.Property<string>("LoginProvider");
+
+                    b.Property<string>("Name");
+
+                    b.Property<string>("Value");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens");
                 });
 
             modelBuilder.Entity("WebCRUD.vNext.Models.ApplicationUser", b =>
@@ -221,7 +236,7 @@ namespace WebCRUD.vNext.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("OrderItems");
+                    b.ToTable("OrderItem");
                 });
 
             modelBuilder.Entity("WebCRUD.vNext.Models.Domain.Orders.Product", b =>
