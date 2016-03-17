@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc.Localization;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -66,7 +67,9 @@ namespace WebCRUD.vNext
             // Add MVC services to the services container
             services.AddMvc()
                 .AddViewLocalization()
-                .AddDataAnnotationsLocalization();
+                .AddDataAnnotationsLocalization()
+                .AddViewOptions(o => 
+                    o.HtmlHelperOptions.Html5DateRenderingMode = Html5DateRenderingMode.CurrentCulture);
 
             // Add memory cache services
             services.AddMemoryCache();
