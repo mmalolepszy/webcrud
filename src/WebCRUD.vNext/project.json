@@ -65,8 +65,8 @@
   },
   "scripts": {
     "prepublish": [
-      "npm install",
-      "node node_modules/bower/bin/bower --allow-root install",
+      "npm --loglevel warn --no-color --no-progress install",
+      "node node_modules/bower/bin/bower --allow-root --no-color install",
       "node node_modules/gulp/bin/gulp.js clean",
       "node node_modules/gulp/bin/gulp.js min"
     ]
