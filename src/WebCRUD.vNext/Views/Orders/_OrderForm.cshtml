@@ -1,4 +1,5 @@
-﻿@model OrderViewModel
+﻿@inject Microsoft.AspNetCore.Authorization.IAuthorizationService AuthorizationService
+@model OrderViewModel
 
 <input type="hidden" asp-for="OrderForm.OrderId" />
 
@@ -25,13 +26,13 @@
     <div class="form-group col-xs-6">
         <label asp-for="OrderForm.Status" class="control-label"></label>
         <div>
-            @if (User.IsInRole("administrator"))
+            @if (await AuthorizationService.AuthorizeAsync(User, Model, "CanChangeStatus"))
             {
                 <select asp-for="OrderForm.Status" asp-items="Model.OrderForm.StatusList" class="form-control"></select>
             }
             else
             {
-                <select asp-for="OrderForm.Status" asp-items="Model.OrderForm.StatusList" class="form-control" disabled="disabled"></select>
+                <select asp-for="OrderForm.Status" asp-items="Model.OrderForm.StatusList" class="form-control" readonly="readonly"></select>
             }
             <span asp-validation-for="OrderForm.Status" class="text-danger"></span>
         </div>
