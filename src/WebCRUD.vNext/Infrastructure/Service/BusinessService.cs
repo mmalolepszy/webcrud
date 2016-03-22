@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using WebCRUD.vNext.Infrastructure.Query;
-using WebCRUD.vNext.Models;
 
 namespace WebCRUD.vNext.Infrastructure.Service
 {

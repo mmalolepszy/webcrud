@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace WebCRUD.vNext.Infrastructure.Command
+﻿namespace WebCRUD.vNext.Infrastructure.Command
 {
     /// <summary>
     /// Wraps result from command with information if executed succesfully or not

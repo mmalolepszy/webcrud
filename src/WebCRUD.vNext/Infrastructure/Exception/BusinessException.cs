@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace WebCRUD.vNext.Infrastructure.Exception
+﻿namespace WebCRUD.vNext.Infrastructure.Exception
 {
     /// <summary>
     /// Use this class to signal business rules violation, validation and other exceptional situation that are releated to 

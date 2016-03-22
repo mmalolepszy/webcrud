@@ -1,11 +1,9 @@
-﻿using System;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Collections.Generic;
-using WebCRUD.vNext.Infrastructure.Query;
-using WebCRUD.vNext.Models;
-using WebCRUD.vNext.ViewModels.Orders;
-using WebCRUD.vNext.Models.Domain.Orders;
 using Microsoft.EntityFrameworkCore;
+using WebCRUD.vNext.Infrastructure.Query;
+using WebCRUD.vNext.Models.Domain.Orders;
+using WebCRUD.vNext.ViewModels.Orders;
 
 namespace WebCRUD.vNext.Services.Orders
 {

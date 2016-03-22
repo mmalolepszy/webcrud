@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using WebCRUD.vNext.Infrastructure.ExtensionMethods;
 using WebCRUD.vNext.Infrastructure.Command;
 using WebCRUD.vNext.Infrastructure.Exception;
+using WebCRUD.vNext.Infrastructure.ExtensionMethods;
 using WebCRUD.vNext.Models.Domain.Orders;
 using WebCRUD.vNext.Services.Validation;
 using WebCRUD.vNext.ViewModels.Orders;
-using Microsoft.EntityFrameworkCore;
 
 namespace WebCRUD.vNext.Services.Orders
 {

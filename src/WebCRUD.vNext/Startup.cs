@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Globalization;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
@@ -12,10 +11,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.PlatformAbstractions;
 using WebCRUD.vNext.Infrastructure.Localization;
 using WebCRUD.vNext.Models;
-using WebCRUD.vNext.Services;
 using WebCRUD.vNext.Services.Validation;
 
 namespace WebCRUD.vNext
@@ -81,11 +78,7 @@ namespace WebCRUD.vNext
             // Add the system clock service
             services.AddSingleton<ISystemClock, SystemClock>();
 
-            services.AddTransient<IEmailSender, AuthMessageSender>();
-            services.AddTransient<ISmsSender, AuthMessageSender>();
-
             services.AddTransient<IOrderValidationService, OrderValidationService>();
-
             services.AddSingleton<IHtmlLocalizerFactory, SingleResourceFileLocalizerFactory>();
         }
 

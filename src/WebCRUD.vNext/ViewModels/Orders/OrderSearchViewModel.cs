@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using WebCRUD.vNext.Models.Domain.Orders;
 
 namespace WebCRUD.vNext.ViewModels.Orders

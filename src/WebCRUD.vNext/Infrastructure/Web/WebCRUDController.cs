@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using WebCRUD.vNext.Infrastructure.Command;
 using WebCRUD.vNext.Infrastructure.Exception;
 using WebCRUD.vNext.Infrastructure.Query;
-using WebCRUD.vNext.Models;
 
 namespace WebCRUD.vNext.Infrastructure.Web
 {

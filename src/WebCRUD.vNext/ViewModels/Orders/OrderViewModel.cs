@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using WebCRUD.vNext.Models.Domain.Orders;
 
 namespace WebCRUD.vNext.ViewModels.Orders
