@@ -21,7 +21,8 @@ namespace WebCRUD.vNext
             }
 
             var host = new WebHostBuilder()
-                .UseDefaultConfiguration(args)
+                .UseDefaultHostingConfiguration(args)
+                .CaptureStartupErrors(true)
                 .UseStartup<Startup>()
                 .Build();
 
