@@ -4,13 +4,36 @@
   ],
   "description": "WebCRUD using AspNetCore nightly builds",
   "version": "1.0.0-beta.1",
-  "compilationOptions": {
+  "buildOptions": {
     "emitEntryPoint": true,
     "warningsAsErrors": true,
     "define": [
       "DEBUG"
     ],
-    "preserveCompilationContext": true
+    "preserveCompilationContext": true,
+    "copyToOutput": {
+      "include": [
+        "data",
+        "Views",
+        "wwwroot",
+        "hosting.json",
+        "appsettings.json"
+      ]
+    },
+    "compile": {
+      "exclude": [
+        "wwwroot/lib/globalize"
+      ]
+    }
+  },
+  "publishOptions": {
+    "include": [
+      "data",
+      "Views",
+      "wwwroot",
+      "hosting.json",
+      "appsettings.json"
+    ]
   },
   "tools": {
     "Microsoft.EntityFrameworkCore.Tools": {
@@ -18,16 +41,6 @@
       "imports": [ "dnxcore50", "portable-net452+win81" ]
     }
   },
-  "content": [
-    "data",
-    "Views",
-    "wwwroot",
-    "hosting.json",
-    "appsettings.json"
-  ],
-  "exclude": [
-    "wwwroot/lib/globalize"
-  ],
   "dependencies": {
     "Microsoft.AspNetCore.Diagnostics": "1.0.0-*",
     "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "1.0.0-*",
