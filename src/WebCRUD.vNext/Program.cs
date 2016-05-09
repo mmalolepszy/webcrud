@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
 
 namespace WebCRUD.vNext
 {
@@ -20,8 +21,14 @@ namespace WebCRUD.vNext
                 SpinWait.SpinUntil(() => Debugger.IsAttached);
             }
 
+            var config = new ConfigurationBuilder()  
+                .AddJsonFile("hosting.json", optional: true)
+                .AddEnvironmentVariables(prefix: "ASPNETCORE_")
+                .AddCommandLine(args)
+                .Build(); 
+
             var host = new WebHostBuilder()
-                .UseDefaultHostingConfiguration(args)
+                .UseConfiguration(config)
                 .CaptureStartupErrors(true)
                 .UseStartup<Startup>()
                 .Build();
