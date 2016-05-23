@@ -31,6 +31,7 @@ namespace WebCRUD.vNext
                 .UseConfiguration(config)
                 .CaptureStartupErrors(true)
                 .UseStartup<Startup>()
+                .UseKestrel()
                 .Build();
 
             host.Run();
