@@ -100,7 +100,9 @@ namespace WebCRUD.vNext
             // Add the runtime information page that can be used by developers
             // to see what packages are used by the application
             // default path is: /runtimeinfo
-            app.UseRuntimeInfoPage();
+            
+            // The method was removed but according to aspnet/Diagnostics#280 it will be back
+            // app.UseRuntimeInfoPage();
 
             Configure(app);
         }
